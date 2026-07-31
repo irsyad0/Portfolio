@@ -2176,3 +2176,12 @@ img {
 .form-outline-style-v1 .form-group {
   margin-bottom: 30px; /* Mengurangi jarak antar input */
 }
+
+/* Hero responsive */
+@media (max-width: 768px) {
+
+    .cover-v1{
+        background-position: center top !important;
+    }
+
+}
