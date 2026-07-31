@@ -2181,7 +2181,7 @@ img {
 @media (max-width: 768px) {
 
     .cover-v1{
-        background-position: center top !important;
+        background-position: center 20%;
     }
 
 }
