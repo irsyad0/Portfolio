@@ -2095,3 +2095,84 @@ span.error {
 .gsap-reveal-img .reveal-wrap .reveal-content .portfolio-item-content h3 {
   margin-bottom: 10px;
 }
+
+/* ==============================================
+   TAMBAHAN CSS RESPONSIF (MOBILE FIXES)
+   Tempelkan di bagian paling bawah style.css
+   ============================================== */
+
+/* 1. Mencegah scroll ke samping (Horizontal Scroll) */
+body, html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* 2. Penyesuaian Ukuran Font untuk HP (Layar di bawah 768px) */
+@media (max-width: 767.98px) {
+  
+  /* Judul Utama diperkecil agar muat di layar HP */
+  .cover-v1 .heading {
+    font-size: 2.5rem; /* Turun dari 3rem/5rem */
+    line-height: 1.2;
+  }
+  
+  /* Sub-judul blog */
+  .cover-v1 .blog-heading {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  /* Sub-heading umum */
+  .cover-v1 .subheading {
+    font-size: 18px; /* Lebih kecil agar proporsional */
+    line-height: 1.5;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  /* Mengurangi padding section agar tidak terlalu boros tempat */
+  .unslate_co--section {
+    padding: 2rem 15px; /* Atas-bawah 2rem, Kiri-kanan 15px */
+  }
+
+  /* Perbaikan Grid/Kolom agar tidak menempel ke pinggir layar */
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* 3. Menjamin Gambar Responsif */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 4. Perbaikan Navigasi Mobile */
+/* Memastikan menu mobile tidak tertutup oleh elemen lain */
+.unslate_co--site-mobile-menu {
+  z-index: 99999 !important; /* Prioritas tertinggi */
+  width: 300px; /* Lebar menu sedikit diperluas */
+  max-width: 80%;
+}
+
+/* 5. Perbaikan Footer di HP */
+/* Mengembalikan footer menjadi normal (di bawah konten) untuk HP */
+@media (max-width: 991.98px) {
+  .unslate_co--site-inner {
+    margin-bottom: 0 !important;
+  }
+
+  .unslate_co--footer {
+    position: relative !important;
+    height: auto !important;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    z-index: 1; /* Pastikan di atas background */
+  }
+}
+
+/* 6. Perbaikan Form (Input) di HP */
+.form-outline-style-v1 .form-group {
+  margin-bottom: 30px; /* Mengurangi jarak antar input */
+}
